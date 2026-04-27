@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Drag Drop ToDO TS</title>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <template id="project-input">
+      <form>
+        <div class="form-control">
+          <p>This is a  test with TypeScript and OOP for a simple todolist project.You can add new tasks an drag and drop to different status.</p>
+          <label for="title">  Task Title</label>
+          <input type="text" id="title" />
+        </div>
+        <div class="form-control">
+          <label for="description">Description</label>
+          <textarea id="description" rows="3"></textarea>
+        </div>
+        <div class="form-control">
+          <label for="people">How many hours </label>
+          <input type="number" id="people" step="1" />
+        </div>
+        <button type="submit">Add</button>
+      </form>
+    </template>
+    <template id="project-list">
+      <section class="projects">
+        <header>
+          <h2></h2>
+        </header>
+        <ul></ul>
+      </section>
+    </template>
+    <template id="single-project">
+       <li draggable="true" class="project-item">
+    <div class="row-title">
+      <h2></h2>
+      <span class="hours-badge"></span>
+    </div>
+    <p></p>
+  </li>
+    </template>
+
+    <div id="app">
+
+           
+    </div>
+
+    <script type="module" src="dist/app.js"></script>
+  </body>
+</html>

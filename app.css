@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+  
+  }
+  
+  html {
+    font-family: sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    direction: ltr;
+     text-align: left;
+  }
+  
+  label,
+  input,
+  textarea {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input,
+  textarea {
+    font: inherit;
+    padding: 0.2rem 0.4rem;
+    width: 100%;
+    /* max-width: 30rem; */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    
+  }
+  
+  input:focus,
+  textarea:focus {
+    outline: none;
+    background: #fff5f9;
+  
+        
+  }
+  
+  button {
+    display: grid;
+          place-items: center;
+          width: 100%;
+    font: inherit;
+    background: #4a4e69;
+    border: 0.3px solid #a7a7a7;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    padding: 0.75rem 1rem;
+    margin-top: 20px;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  button:hover,
+  button:active {
+    background: #4b0453;
+    border-color: #a80041;
+  }
+  #user-input p {
+  background: #e8f4f8;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  border-right: 3px solid #a781c0;
+}
+  
+
+#todo-projects {
+  grid-column: 1;
+  border-color: #dcb939;
+}
+
+#todo-projects header {
+  background: #dcb939;
+    padding: 9px;
+
+}
+
+#doing-projects {
+  border-color: #80cdec;
+   grid-column: 2;
+}
+
+#doing-projects header {
+  background: #80cdec;
+    padding: 9px;
+
+}
+
+#done-projects {
+  border-color: #64d796;
+   grid-column: 3; 
+}
+
+#done-projects header {
+  background: #64d796;
+  padding: 9px;
+}
+
+ #finished-projects li h2 {
+    color: #0044ff;
+  }
+
+.projects {
+ 
+  margin: 1rem;
+  border: 1px solid;
+  grid-row: 2;  
+  text-align: center;
+  font-size: small;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;  /* برای اینکه cornerهای گرد حفظ بشه */
+}
+.projects:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+
+
+  .projects h2 {
+    margin: 0;
+    color: white;
+  }
+  
+  .projects ul {
+    list-style: none;
+    margin: 10;
+    min-height: 200px;
+    padding: 0.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+ 
+
+  /* استایل با کلاس project-item */
+.project-item {
+  text-align: left;  /* چپ‌چین کردن کل محتوا */
+  direction: ltr;  
+  background: linear-gradient(135deg, #ffffff 0%, #c3c9ce 100%);
+  border-radius: 16px;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s ease;
+  cursor: grab;
+  border-left: 6px solid;
+  list-style: none;
+}
+
+.project-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+/* ردیف اول: عنوان و ساعت (کنار هم) */
+.project-item .row-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.project-item:active {
+  cursor: grabbing;
+  opacity: 0.5;
+}
+.project-item.dragging {
+  opacity: 0.3;
+}
+/* عنوان */
+.project-item h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #1a1a2e;
+   flex: 1;
+}
+/* ساعت (badge ساعت) */
+.project-item .hours-badge {
+  flex: 0;
+  background: #4a4e69;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* تعداد افراد */
+.project-item h3 {
+  font-size: 0.75rem;
+  color: white;
+  margin: 0.5rem 0;
+  display: inline-block;
+  background: #4a4e69;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}
+
+/* توضیحات پروژه */
+.project-item p {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin: 0;
+  line-height: 1.4;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+/* رنگ border بر اساس ستون والد */
+#todo-projects .project-item {
+  border-left-color: #f4c542;
+}
+
+#doing-projects .project-item {
+  border-left-color: #80CDEC;
+}
+
+#done-projects .project-item {
+  border-left-color: #64D795;
+}
+
+  .droppable {
+    background: #eeeeef;
+  }
+
+  #user-input {
+    grid-column: 1 / -1;  /* از ستون 1 تا آخر (هر سه ستون) */
+    grid-row: 1;  /* سطر اول */
+    background: #f7f7f7;
+    border-radius: 20px;
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08), 0 4px 6px rgba(0, 0, 0, 0.05);
+      padding:  0.5rem;
+  /* margin: 1rem; */
+  transition: all 0.2s ease;
+  border: none;
+  }
+
+  #user-input:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12), 0 6px 10px rgba(0, 0, 0, 0.08);
+}
+#app {
+   display: grid;
+  grid-template-rows: auto 1fr;  /* سطر اول: ارتفاع خودکار، سطر دوم: بقیه فضا */
+  grid-template-columns: 1fr 1fr 1fr;  /* سه ستون مساوی برای سطر دوم */
+  gap: 1rem;
+  padding: 1rem;
+  min-height: 100vh;  /* کل ارتفاع صفحه رو پر کن */
+}

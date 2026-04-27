@@ -1,0 +1,15 @@
+{
+  "name": "understanding-typescript-by-real-project",
+  "version": "1.0.0",
+  "description": "Understanding TypeScript Course Setup",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "typescript",
+    "course"
+  ],
+  "author": "Mohammad Hashemi",
+  "license": "ISC"
+}
