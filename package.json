@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && copyfiles index.html dist/"
+  "build": "tsc && copyfiles index.html app.css dist/"
   },
   "keywords": [
     "typescript",
